@@ -1,0 +1,9 @@
+server:
+    port: 8761
+eureka:
+    instance:
+        hostname: server1
+        prefer-ip-address: true
+    client:
+        service-url:
+            defaultZone: http://${security.user.name}:${security.user.password}@server2:8762/eureka/,http://${security.user.name}:${security.user.password}@server3:8763/eureka/
